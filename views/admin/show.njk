@@ -1,0 +1,50 @@
+{% extends "admin/extend.njk" %}
+
+{% block content %}
+
+    <div class="show-title">
+        <h2>Receita: {{recipe.title}}</h2>
+        <div class="show-button">
+            <a href="/admin/recipes/{{recipe.id}}/edit">Editar receita</a>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="details-image">
+            <img src="{{recipe.image}}" alt="{{recipe.title}}">
+        </div>
+        <div class="details-title">
+            <h2>{{recipe.title}}</h2>
+        </div>
+        <div class="details-author">
+            <p>por {{recipe.author}}</p>
+        </div>
+        <div class="details-ingredients">
+            <div class="title">
+                <h2>Ingredientes</h2>
+            </div> 
+            <ul class="content-1">
+                {% for ingredient in recipe.ingredients %}
+                    <li>{{ingredient}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="details-preparation">
+            <div class="title">
+                <h2>Modo de preparo</h2>
+            </div>          
+            <ul class="content-2">
+                {% for item in recipe.preparation %}
+                    <li>{{item}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="details-information">
+            <div class="title">
+                <h2>Informações Adicionais</h2>
+            </div>  
+            <p class="content-3">{{recipe.information}}</p>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Receitas</title>
+
+{% endblock %}
+
+{% block header %}
+
+    <a href="/sobre">Sobre</a>
+    <a href="/receitas" id="receitas">Receitas</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <section class="cards">
+
+        {% for item in receipes %}
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{item.image}}" alt="{{item.title}}">
+                </div>
+                <div class="card-title">
+                    <h1>{{item.title}}</h1>
+                </div>
+                <div class="card-author">
+                    <p>{{item.author}}</p>
+                </div>
+            </div>
+                    
+        {% endfor %}
+
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="/scripts.js"></script>
+
+{% endblock %}
+

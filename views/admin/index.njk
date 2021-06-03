@@ -1,0 +1,32 @@
+{% extends "admin/extend.njk" %}
+
+{% block content %}
+
+    <h2 class="index-title">Gerenciar receitas</h2>
+
+    <section class="section-index">
+
+        {% for recipe in recipes %}
+
+                <div class="card-index">
+                    <div class="image-index">
+                        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    </div>
+                    <div class="content-index">
+                        <p class="content-title">{{recipe.title}}</p>
+                        <p class="index-author">{{recipe.author}}</p>
+                        <a class="link-index">Visualizar</a>
+                    </div>
+                </div>
+            
+        {% endfor %}
+
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="/admin.js"></script>
+
+{% endblock %}

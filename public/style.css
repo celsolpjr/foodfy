@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    width: 67.1%;
+    margin: 0 auto;
+}
+
+/* === HEADER === */
+
+header {
+    display: flex;
+}
+
+.header-admin {
+    background: #111111;
+}
+
+.logo {
+    margin-top: 3.3%;
+}
+
+.logo-admin {
+    margin: 1.8% 0 1.8% 16.5%;
+}
+
+.menu {
+    margin: 3.4% 0 0 8.7%;
+}
+
+.menu a {
+    font-size: 16px;
+    color: #111111;
+    text-decoration: none;
+    padding-right: 25px;
+}
+
+#receitas {
+    font-weight: bold;
+}
+
+#sobre {
+    font-weight: bold;
+}
+
+/* === ABOUT === */
+
+.about {
+    background: #FBDFDB;
+    border-radius: 30px;
+    margin-top: 2.7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-title {
+    margin: 12% 18.5% 10.6% 7.3%;
+    padding: 30px;
+}
+
+.about-title h1 {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 3%;
+}
+
+.about-title p {
+    opacity: 0.7;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.about-chef {
+    padding-top: 50px;
+    margin-left: 40%;
+}
+
+/* === CARDS === */
+
+.wrapper {
+    margin-top: 4.5%;
+}
+
+.wrapper h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cards {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5%;
+}
+
+.card {
+    margin-bottom: 2.7%;
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-title {
+    margin-top: 1.8%;
+    margin-bottom: 0.5%;
+}
+
+.card-title h1 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #111111;
+}
+
+.card-author {
+    margin-bottom: 1.8%;
+}
+
+.card-author p {
+    font-size: 14px;
+    color: #777777;
+}
+
+/* === SOBRE === */
+
+#content {
+    margin-top: 4.6%;
+    margin-bottom: 2.1%;
+}
+
+#content h1 {
+    font-size: 24px;
+    color: #111111;
+    margin-bottom: 1.8%;
+}
+
+#content h2 {
+    font-size: 20px;
+    color: #111111;
+    margin-bottom: 1.8%;
+}
+
+#content p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin-bottom: 2.7%;
+}
+
+/* === FOOTER === */
+
+footer {
+    background: #EEEEEE;
+    margin-top: 4.5%;
+}
+
+footer p {
+    padding: 25px;
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+}
+
+/*=== DETAILS ===*/
+
+.details {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.details-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.details-title,
+.details-author {
+    text-align: center;
+}
+
+.details-title {
+    margin-top: 4%;
+    font-weight: bold;
+    font-size: 36px;
+    color: #111111;
+}
+
+.details-author {
+    font-size: 20px;
+    color: #777777;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-top: 3.1%;
+}
+
+.title h2 {
+    font-size: 24px;
+    color: #111111;
+}
+
+.title a {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    color: #999999;
+    text-transform: uppercase;
+    margin-left: 0.6%;
+    margin-top: 0.6%;
+}
+
+.details-ingredients ul,
+.details-preparation ul,
+.details-information p {
+    margin-top: 1.6%;
+    list-style-position: inside;
+}
+
+.details-ingredients li,
+.details-preparation li,
+.details-information p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.content-1.active,
+.content-2.active,
+.content-3.active {
+    display: none;
+}
+
+/* CREATE ADMIN FORM */
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3.4%;
+}
+
+.top h2 {
+    font-size: 24px;
+    color: #111111;
+}
+
+.top button {
+    background: #6558C3;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: right;
+    padding: 1.4%;
+    cursor: pointer;
+}
+
+.form-title {
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #111111;
+}
+
+form input,
+textarea {
+    margin-top: 1%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 100%;
+    padding: 1.15%;
+    font-size: 16px;
+    color: #111111;
+}
+
+form a {
+    font-size: 16px;
+    color: #6558C3;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+form textarea {
+    width: 100%;
+    min-height: 257px;
+    resize: none;
+}
+
+/* ADMIN INDEX */
+
+.index-title {
+    margin-top: 4.5%;
+    font-size: 24px;
+    color: #111111;
+}
+
+.section-index {
+    margin-top: 2.7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.image-index img {
+    max-width: 90%;
+    border-radius: 8.57px;
+}
+
+.content-index p:nth-child(2) {
+    margin-top: 0.5%;
+}
+
+.content-title {
+    font-size: 18px;
+    color: #111111;
+}
+
+.index-author {
+    font-size: 14px;
+    color: #777777;
+}
+
+.content-index a {
+    display: inline-block;
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+    cursor: pointer;
+}
+
+/* ADMIN SHOW */
+
+.show-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-title h2 {
+    margin-top: 3.7%;
+    font-size: 24px;
+    color: #111111;
+}
+
+.show-button {
+    margin-top: 3.4%;
+    background: #6558C3;
+    border-radius: 4px;
+}
+
+.show-button a {
+    display: flex;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+}
+
+
+
+
