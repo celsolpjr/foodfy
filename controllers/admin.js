@@ -33,13 +33,13 @@ exports.edit = function(req, res) {
 
     const foundRecipe = data.recipes[id];
 
+    if (!foundRecipe) {
+        return res.send("Receita não encontrada!");
+    }
+
     const recipe = {
         ...foundRecipe,
         id: id
-    }
-
-    if (!recipe) {
-        return res.send("Receita não encontrada!");
     }
 
     return res.render("admin/edit", { recipe });
@@ -66,4 +66,41 @@ exports.post = function(req, res) {
 
     })
     
+}
+
+exports.put = function(req, res) {
+
+    const { id, preparation, information, ingredients, author, title, image } = req.body;
+
+    data.recipes[id] = {
+        image: image,
+        title: title,
+        author: author,
+        ingredients: ingredients,
+        preparation: preparation,
+        information: information
+    }
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if (err) return res.send("write file error!");
+
+        return res.redirect(`/admin/recipes/${id}`);
+    })
+
+}
+
+exports.delete = function(req, res) {
+    const { id } = req.body;
+
+    const recipes = data.recipes.filter(function(recipe) {
+        return(recipe != data.recipes[id]);
+    })
+
+    data.recipes = recipes;
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if (err) return res.send("write file error!");
+
+        return res.redirect(`/admin/recipes/`);
+    })
 }

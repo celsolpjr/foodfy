@@ -267,6 +267,10 @@ footer p {
     cursor: pointer;
 }
 
+.form {
+    position: relative;
+}
+
 .form-title {
     margin-top: 2%;
     font-weight: bold;
@@ -300,6 +304,22 @@ form textarea {
     resize: none;
 }
 
+#form-delete {
+    position: absolute;
+    right: 16%;
+    top: .07%;
+}
+
+#form-delete button {
+    background: #DC4747;
+    border-radius: 4px;
+    padding: 33%;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* ADMIN INDEX */
 
 .index-title {
@@ -317,6 +337,7 @@ form textarea {
 .card-index {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 5%;
 }
 
 .image-index img {

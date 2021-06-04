@@ -1,7 +1,14 @@
-const receipes = require("../data");
+const data = require("../data.json");
 
 exports.index = function(req, res) {
-    return res.render("foodfy/home", { receipes });
+
+    const recipes = data.recipes.filter(function(recipe, recipeIndex) {
+        if (recipeIndex < 6) {
+            return recipe;
+        }
+    })
+
+    return res.render("foodfy/home", { receipes: recipes });
 }
 
 exports.about = function(req, res) {
@@ -9,13 +16,13 @@ exports.about = function(req, res) {
 }
 
 exports.receipes = function(req, res) {
-    return res.render("foodfy/receitas", { receipes });
+    return res.render("foodfy/receitas", { receipes: data.recipes });
 }
 
 exports.receipeIndex = function(req, res) {
 
     const receipeIndex = req.params.index;
-    const receipe = receipes[receipeIndex];
+    const receipe = data.recipes[receipeIndex];
 
     return res.render("foodfy/detalhes", { receipe });
 
