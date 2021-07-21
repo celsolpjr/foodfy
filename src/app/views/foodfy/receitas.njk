@@ -10,6 +10,7 @@
 
     <a href="/sobre">Sobre</a>
     <a href="/receitas" id="receitas">Receitas</a>
+    <a href="/chefs">Chefs</a>
 
 {% endblock %}
 
@@ -22,7 +23,7 @@
 
             <div class="card">
                 <div class="card-image">
-                    <img src="{{item.image}}" alt="{{item.title}}">
+                    <a href="/receitas/{{item.id}}"><img src="{{item.image}}" alt="{{item.title}}"></a>
                 </div>
                 <div class="card-title">
                     <h1>{{item.title}}</h1>
@@ -40,7 +41,7 @@
 
 {% block scripts %}
 
-    <script src="/scripts.js"></script>
+    
 
 {% endblock %}
 

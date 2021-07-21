@@ -1,8 +1,11 @@
-{% extends "admin/extend.njk" %}
+{% extends "extend.njk" %}
 
 {% block content %}
 
-    <h2 class="index-title">Gerenciar receitas</h2>
+    <div class="admin-index-title">
+        <h2 class="index-title">Gerenciar receitas</h2>
+        <a href="/admin/recipes/create">Criar receita</a>
+    </div>
 
     <section class="section-index">
 
@@ -14,8 +17,8 @@
                     </div>
                     <div class="content-index">
                         <p class="content-title">{{recipe.title}}</p>
-                        <p class="index-author">{{recipe.author}}</p>
-                        <a class="link-index">Visualizar</a>
+                        <p class="content-author">por {{recipe.chef}}</p>
+                        <a class="link-index" href="/admin/recipes/{{recipe.id}}">Visualizar</a>
                     </div>
                 </div>
             

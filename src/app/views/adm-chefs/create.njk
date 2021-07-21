@@ -1,0 +1,28 @@
+{% extends "extend.njk" %}
+
+{% block content %}
+
+    <div class="form-chefs">
+
+        <form action="/admin/chefs" method="POST">
+        
+            <div class="form-header">
+                <h2>Criando chef</h2>
+                <button type="submit">Salvar chef</button>
+            </div>
+
+            <div class="chefs-item">
+                <div class="input-title">Nome</div>
+                <input type="text" name="name">
+            </div>
+
+            <div class="chefs-item">
+                <div class="input-title">Avatar</div>
+                <input type="text" name="avatar_url">
+            </div>
+
+        </form>
+
+    </div>
+
+{% endblock %}

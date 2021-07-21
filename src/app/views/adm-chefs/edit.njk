@@ -1,0 +1,53 @@
+{% extends "extend.njk" %}
+
+{% block content %}
+
+    <div class="form-chefs">
+
+        <div class="form-header">
+                <h2>Editando chef</h2>
+                <div class="form-buttons">
+                    <button type="submit" form="submit-delete">Deletar</button>
+                    <button type="submit" form="submit-edit">Salvar chef</button>
+                </div>
+        </div>
+
+        <form action="/admin/chefs?_method=DELETE" method="POST" id="submit-delete">
+            <input type="hidden" name="id" value="{{ chef.id }}">
+        </form>
+
+        <form action="/admin/chefs?_method=PUT" method="POST" id="submit-edit">
+
+            <div class="chefs-item">
+                <div class="input-title">Nome</div>
+                <input type="text" name="name" value="{{ chef.name }}">
+            </div>
+
+            <div class="chefs-item">
+                <div class="input-title">Avatar</div>
+                <input type="text" name="avatar_url" value="{{ chef.avatar_url }}">
+            </div>
+
+            <input type="hidden" name="id" value="{{ chef.id }}">
+
+        </form>
+
+    </div>
+
+    <script>
+
+        const formDelete = document.querySelector("#submit-delete");
+
+        formDelete.addEventListener("submit", function(event) {
+        
+            const confirmation = confirm("Deseja deletar?")
+
+            if(!confirmation) {
+                event.preventDefault();
+            }
+
+        })
+
+    </script>
+
+{% endblock %}

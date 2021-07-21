@@ -1,4 +1,4 @@
-{% extends "admin/extend.njk" %}
+{% extends "extend.njk" %}
 
 {% block content %}
 
@@ -15,9 +15,7 @@
         </div>
         <div class="details-title">
             <h2>{{recipe.title}}</h2>
-        </div>
-        <div class="details-author">
-            <p>por {{recipe.author}}</p>
+            <p>por {{recipe.chef}}</p>
         </div>
         <div class="details-ingredients">
             <div class="title">
